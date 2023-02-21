@@ -17,7 +17,7 @@ export default function Home() {
     <div >
       <Header/>
       <a href="">
-        <Image className='fixed-bottom w-16' src={imgWapp} alt=""/>
+        <Image className='fixed-bottom w-16 z-20' src={imgWapp} alt=""/>
       </a>
       <HomePage/>
       <Letreiro/>
