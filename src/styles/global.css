@@ -32,3 +32,11 @@
 }
 
 /* LETREIRO */
+
+@media screen and (max-width: 1024px) {
+    .fixed-bottom{
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+    }
+}
