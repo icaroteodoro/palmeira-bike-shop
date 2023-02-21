@@ -16,7 +16,7 @@ export default function Home() {
   return (
     <div >
       <Header/>
-      <a href="">
+      <a href="https://chat.whatsapp.com/FOQ0sQB0HULCZYtgQAv0eW" target="_blank">
         <Image className='fixed-bottom w-16 z-20' src={imgWapp} alt=""/>
       </a>
       <HomePage/>
