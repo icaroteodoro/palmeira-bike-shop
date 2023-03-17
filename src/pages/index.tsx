@@ -2,26 +2,28 @@ import { Inter } from '@next/font/google'
 
 
 import { HomePage } from '../components/HomePage';
-import imgWapp from '../assets/icon-wpp.svg';
-import Image from 'next/image';
-import { Header } from '@/components/Header';
-import logo from '../assets/logo-home.svg';
-import { Letreiro } from '@/components/Letreiro';
-import { SlidePage } from '@/components/SlidePage';
+
+import { Letreiro } from '../components/Letreiro';
+import { SlidePage } from '../components/SlidePage';
+import Layout from '../components/Layout';
+import CardProduto from '@/components/cardProduto';
+
+import Celin from '../images/celin.png'
+const celin = '/images/celin.png';
 
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <div >
-      <Header/>
-      <a className='sm:left-4' href="https://chat.whatsapp.com/FOQ0sQB0HULCZYtgQAv0eW" target="_blank">
-        <Image className='fixed-bottom w-16 z-20' src={imgWapp} alt=""/>
-      </a>
-      <HomePage/>
-      <Letreiro/>
-      <SlidePage/>
+    <div>
+      <Layout>
+        <HomePage/>
+        <Letreiro/>
+        <SlidePage/>
+        <CardProduto urlImg={Celin} name='CELIN DE MARCA' price='R$ 299,99' category='PRODUTOS'/>
+      </Layout>
+      
     </div>
   )
 }
