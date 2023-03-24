@@ -12,7 +12,6 @@ export default function Cadastro(){
     const [ password, setPassword ] = useState('');
     function cadastrar(evt: FormEvent){
         evt.preventDefault();
-        console.log('cadastrar');
         try{
             const response = api.post('/user/register', {
                 name,
@@ -21,7 +20,7 @@ export default function Cadastro(){
                 password
             });
             
-            console.log(response);
+            console.log(JSON.stringify(response));
             setName('');
             setEmail('');
             setPassword('');

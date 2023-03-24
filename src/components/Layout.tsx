@@ -2,6 +2,7 @@ import Image from "next/image";
 import { ReactNode } from "react";
 import imgWapp from '../assets/icon-wpp.svg';
 import { Header } from "./Header";
+import Rodape from "./Rodape";
 interface Layout {
     children: ReactNode;
 }
@@ -15,7 +16,7 @@ export default function Layout(props: Layout){
             </a>
             {props.children}
 
-
+            <Rodape/>
         </div>
         
     );

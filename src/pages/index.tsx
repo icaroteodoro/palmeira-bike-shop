@@ -21,7 +21,8 @@ export default function Home() {
         <HomePage/>
         <Letreiro/>
         <SlidePage/>
-        <CardProduto urlImg={Celin} name='CELIN DE MARCA' price='R$ 299,99' category='PRODUTOS'/>
+        <Letreiro/>
+        {/* <CardProduto urlImg={Celin} name='CELIN DE MARCA' price='R$ 299,99' category='PRODUTOS'/> */}
       </Layout>
       
     </div>

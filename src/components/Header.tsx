@@ -42,7 +42,7 @@ export function Header(){
                 <h1 className='font-bold text-1xl md:text-2xl my-auto ml-10 lg:ml-32 font-K2D italic'><NextLink href='/'>Palmeira Bike Shop</NextLink></h1>
                 {/* PESQUISA */}
                 <div className='my-auto mx-auto bg-gray-200 h-10 w-4/12 rounded-lg relative hidden sm:flex'>
-                    <input placeholder='O que você está procurando?' className='bg-transparent h-full w-full rounded static p-3 font-K2D italic text-lg' type="text" />
+                    <input placeholder='O que você está procurando?' className='bg-transparent h-full w-full  rounded static p-3 font-K2D italic text-lg' type="text" />
                     <button className='absolute h-full right-1'>
                         <Image className='my-auto w-7 mr-2' src={search} alt=""/>
                     </button>
@@ -54,8 +54,8 @@ export function Header(){
                     <a href="" className='mx-auto'><Image src={carIcon} alt="" /></a>
                 </div>
                 {/* SANDUICHE BUTTON */}
-                <div className='my-auto ml-36 md:hidden'>
-                    <button typeof='button' onClick={viewMenu}><Image src={toggle} alt="toggle"/></button>
+                <div className='my-auto absolute right-7 top-12  md:hidden'>
+                    <button typeof='button' onClick={viewMenu}><Image className='w-8' src={toggle} alt="toggle"/></button>
                 </div>
             </div>
             <MenuRight view={view} view2={view2}/>
