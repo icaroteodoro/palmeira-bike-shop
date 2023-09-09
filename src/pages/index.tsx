@@ -1,30 +1,29 @@
-import { Inter } from '@next/font/google'
+import { Inter } from "@next/font/google";
 
+import { HomePage } from "../components/HomePage";
 
-import { HomePage } from '../components/HomePage';
+import { Letreiro } from "../components/Letreiro";
+import { SlidePage } from "../components/SlidePage";
+import Layout from "../components/Layout";
+import CardProduto from "@/components/cardProduto";
 
-import { Letreiro } from '../components/Letreiro';
-import { SlidePage } from '../components/SlidePage';
-import Layout from '../components/Layout';
-import CardProduto from '@/components/cardProduto';
+import UserContext from "../contexts/UserContext";
 
-import Celin from '../images/celin.png'
-const celin = '/images/celin.png';
+import ProdutosAreaHome from "@/components/ProdutosAreaHome";
 
-
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+
+
   return (
-    <div>
+    <UserContext.Provider value={{}}>
       <Layout>
-        <HomePage/>
-        <Letreiro/>
-        <SlidePage/>
-        <Letreiro/>
-        {/* <CardProduto urlImg={Celin} name='CELIN DE MARCA' price='R$ 299,99' category='PRODUTOS'/> */}
+        <HomePage />
+        <SlidePage />
+        <Letreiro />
+        <ProdutosAreaHome />
       </Layout>
-      
-    </div>
-  )
+    </UserContext.Provider>
+  );
 }

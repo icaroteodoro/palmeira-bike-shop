@@ -2,6 +2,7 @@ import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 
 interface CardProps {
+    id: string;
     urlImg: StaticImageData,
     name: string,
     category: string,
@@ -11,7 +12,7 @@ interface CardProps {
 
 export default function CardProduto(props : CardProps){
     return (
-        <Link href='/paginaProduto' className="w-64 h-64  block">
+        <Link href={'/pagina-produto/' + props.id} className="w-80 block border">
             <Image className="mx-auto p-5 bg-gray-100 w-full" src={props.urlImg} alt='' width='200' height='100'></Image>
             <div className="flex">
                 <h2 className="mx-auto font-medium text-3xl font-sunflower">{props.name}</h2>
@@ -22,8 +23,6 @@ export default function CardProduto(props : CardProps){
             <div className="flex">
                 <h3 className="mx-auto text-2xl">{props.price}</h3>
             </div>
-            
-            
         </Link>
     );
 }

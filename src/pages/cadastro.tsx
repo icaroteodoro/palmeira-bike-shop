@@ -1,4 +1,5 @@
 import { Header } from "@/components/Header";
+import Link from "next/link";
 import { useState } from "react";
 
 import { FormEvent } from "react";
@@ -45,35 +46,42 @@ export default function Cadastro(){
                     <div className="flex">
                         <div className="block mx-auto w-10/12 md:w-7/12">
                             <label className="font-sunflower font-semibold" htmlFor="">Nome Completo *</label> <br />
-                            <input className="border w-full h-10 rounded bg-gray-100 p-2 mt-3 mx-auto required:" placeholder="Digite seu nome..." onChange={e => setName(e.target.value)} value={name} type="text" />
+                            <input className="border w-full h-10 rounded bg-gray-100 p-2 mt-3 mx-auto required:" placeholder="Digite seu nome..." onChange={e => setName(e.target.value)} value={name} type="text" required/>
                         </div>
                     </div>
                     <div>
                         <div className="block mx-auto w-10/12 md:w-7/12 mt-3">
                             <label className="font-sunflower font-semibold" htmlFor="">E-mail *</label><br />
-                            <input className="border w-full h-10 rounded bg-gray-100 p-2 mt-3" placeholder="Digite seu e-mail..." onChange={e => setEmail(e.target.value)} value={email} type="text" />
+                            <input className="border w-full h-10 rounded bg-gray-100 p-2 mt-3" placeholder="Digite seu e-mail..." onChange={e => setEmail(e.target.value)} value={email} type="email" required/>
                         </div>
                         
                     </div>
                     <div>
                         <div className="block mx-auto w-10/12 md:w-7/12 mt-3">
                             <label className="font-sunflower font-semibold" htmlFor="">Celular *</label> <br />
-                            <input className="border w-full h-10 rounded bg-gray-100 p-2 mt-3" placeholder="Digite seu número de celular..." onChange={e => setCell(e.target.value)} value={cell} type="text" />
-                        </div>
-                        
+                            <input className="border w-full h-10 rounded bg-gray-100 p-2 mt-3" placeholder="Digite seu número de celular..." onChange={e => setCell(e.target.value)} value={cell} type="text" required/>
+                        </div> 
                     </div>
                     <div>
                         <div className="block mx-auto w-10/12 md:w-7/12 mt-3">
                             <label className="font-sunflower font-semibold" htmlFor="">Senha *</label> <br />
-                            <input className="border w-full h-10 rounded bg-gray-100 p-2 mt-3" placeholder="Digite sua senha..." onChange={e => setPassword(e.target.value)} value={password} type="password" />
+                            <input className="border w-full h-10 rounded bg-gray-100 p-2 mt-3" placeholder="Digite sua senha..." onChange={e => setPassword(e.target.value)} value={password} type="password" required/>
                         </div>
                     </div>
-                    <div className="flex pt-5 pb-10">
+                    <div className="flex pt-5 ">
                         <button type="submit" className="bg-gray-700 w-72 h-14  rounded text-white mx-auto mt-10">Cadastrar</button>
                     </div>
-                    
+                    <div className="flex">
+                        <span className="mx-auto mt-3">
+                            Já tem cadastro? <Link className="underline font-bold" href='/login'>Faça seu login</Link>
+                        </span>
+                    </div>
+                    <div className="flex">
+                        <span className="mx-auto mt-3">
+                            Ao continuar, você está concordando com nossa <Link className="underline font-bold" href='/cadastro'>Política de Privacidade</Link>
+                        </span>
+                    </div> 
                 </div>
-                
             </form>
         </div>
     );

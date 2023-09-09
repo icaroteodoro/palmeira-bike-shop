@@ -31,9 +31,26 @@
     }
 }
 
+.area-prod{
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20% ;
+}
+
 /* LETREIRO */
 
 @media screen and (max-width: 1024px) {
+    .fixed-bottom{
+        position: fixed;
+        bottom: 20px;
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .area-prod{
+        display: grid;
+        grid-template-columns:  100% ;
+    }
     .fixed-bottom{
         position: fixed;
         bottom: 20px;
